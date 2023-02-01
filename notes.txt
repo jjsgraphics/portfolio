@@ -1,0 +1,7 @@
+to do:
+
+- make resume a pdf download link
+- create a seperate about me page
+
+- maybe make a gallery? at the bottom of the description say click here for more
+- gallery goes to sections for vfx, illus etc. which lead to more html pages with all the artwork

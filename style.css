@@ -1,0 +1,209 @@
+*{
+  box-sizing: border-box;
+}
+
+img { /* prevent user from dragging images */ 
+  user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+#video-container {
+  width: 100vw;
+  height: 400vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+#videobg {
+  top: 0;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  /*-o-filter: blur(3px);
+  filter: blur(3px);*/
+  object-fit: fill;
+  transform: scale(1.5);
+  min-height: 100%;
+  min-width: 100%;
+}
+
+.header{
+  min-height: 400vh;
+  width: 100%;
+  background-color: #1e1b31ee;/* ee*/ 
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+@font-face{
+  font-family: "Grotesk";
+  src: url("fonts/Akzidenz-grotesk-bold.ttf");
+}
+
+@font-face{
+  font-family: "Grotesk";
+  font-weight: bold;
+  src: url("fonts/Akzidenz-grotesk-black.ttf");
+}
+
+@font-face{
+  font-family: "Euclid SquareB";
+  src: url("fonts/EuclidSquare-Bold.ttf");
+}
+
+@font-face{
+  font-family: "Euclid SquareM";
+  src: url("fonts/EuclidSquare-Medium.ttf");
+}
+
+@font-face{
+  font-family: "Euclid SquareL";
+  src: url("fonts/EuclidSquare-LightItalic.ttf");
+}
+
+p{
+  color:#f9f8ef;
+  font-family:"Euclid SquareL";
+  font-size: 150%;
+  align-items: left;
+  text-align: left;
+}
+
+h1, h2, h3{
+  color:#f9f8ef;
+  font-family:"Euclid SquareB";
+}
+
+h2 {
+  text-align: left;
+  font-size: 3vw;
+}
+
+h6 {
+  text-align:right;
+  margin:0%;
+  font-family:"Euclid SquareL";
+  font-size: 10px; /*2vw*/
+  color:#f9f8ef;
+}
+
+nav{
+  display:flex;
+  padding: 2% 6%;
+  justify-content: space-between;
+  align-items: center;
+}
+nav img{
+  width: 150px;
+  align-items: center;
+}
+nav-links{
+  flex: 1;
+  text-align: center;
+}
+nav ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+  font-family:"Euclid SquareB";
+}
+nav ul li::after{
+  content: '';
+  width: 0%;
+  height: 4px;
+  background: #812c5b;
+  display: block;
+  margin: auto;
+  margin-top:2px;
+  transition: 0.5s;
+  border-radius: 2px;
+}
+
+nav ul li:hover::after{
+  width: 100%;
+}
+
+.text-box{
+  /*position: absolute;
+  transform: translate(0%, -50%);
+  text-align: center;*/
+  font-size: 3vw; /*120%*/
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-left: 10%;
+}
+
+.image-container{
+  width: 85%;
+  margin: auto;
+  text-align: center;
+  padding-top: 0%;
+}
+.col{
+  flex-basis: 32%;
+  border-radius: 5%;
+  margin-bottom: 5%;
+  position: relative;
+  overflow: hidden;
+}
+.col img{
+  width: 100%;
+}
+
+.left-button, .right-button {
+  position: absolute; /* position the buttons absolutely within the container */
+  top: 50%; /* center the buttons vertically within the container */
+  transform: translateY(-50%); /* move the buttons up by half their height */
+  height: 100%;
+  width: 20%;
+  background: none;
+  border: none;
+}
+
+.left-button img, .right-button img{
+  transition: opacity 0.6s;
+  opacity: 10%;
+}
+
+.left-button:hover img{
+  opacity: 100%;
+}
+
+.right-button:hover img{
+  opacity: 100%;
+}
+
+.right-button img{
+  transform: scaleX(-1);
+}
+
+.left-button {
+  left: 0; /* place the left button at the left edge of the container */
+}
+
+.right-button {
+  right: 0; /* place the right button at the right edge of the container */
+}
+
+.subtitle {
+  text-align: left; /* center the subtitle element */
+  margin-top: 10px; /* add some margin between the image and the subtitle */
+  font-family:"Euclid SquareM";
+}
+
+nav ul li a:link { text-decoration: none; color:#f9f8ef;}
+nav ul li a:visited { text-decoration: none; color:#f9f8ef;}
+nav ul li a:hover { text-decoration: none; color:#f9e6e6;}
+nav ul li a:active { text-decoration: none; color:#f9f8ef;}
